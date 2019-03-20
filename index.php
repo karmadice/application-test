@@ -86,7 +86,8 @@ $people = array(
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $(".view_detail").click(function(){
+        $(document).on('click', ".view_detail", function(e){
+            e.preventDefault();
             var fullName = $(this).closest("tr").find(".first-name").html() + " " + $(this).closest("tr").find(".last-name").html();
             var email = $(this).closest("tr").find(".email").html();
 
